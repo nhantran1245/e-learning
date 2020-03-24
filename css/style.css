@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 body {
     font-family: arial;
     font-size: 20px;
@@ -12,8 +12,7 @@ ul li {
 
 #main_menu li a {
     text-decoration: none;
-    color: 
-=======
+}
 body{
     min-height: 1300px;
 }
@@ -44,5 +43,4 @@ div#footer div#contact_logo{
     width:60px;
     height:60px;
     border-radius:22%;
->>>>>>> 525849f1bffacd07ee34bbff5e8e414d1cffff04
 }

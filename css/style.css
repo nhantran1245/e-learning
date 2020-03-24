@@ -4,17 +4,34 @@ body {
     font-size: 20px;
 }
 
-
+#menu ul{
+    float:right;
+    margin-right: 150px;
+}
+#menu a {
+    float: left;
+    margin-left: 50px;
+    height: 60px;
+}
 ul li {
     list-style: none;
 }
-
-
+#main_menu li {
+    text-decoration: none;
+    display: inline-block;
+    color: #000080;   
+}
 #main_menu li a {
     text-decoration: none;
 }
-body{
+
+#menu a img {
+    height: 100%;
+    width: auto;
+}
+body {
     min-height: 1300px;
+
 }
 div#footer {
     background-image: url(../image/footer-background.png);
@@ -26,7 +43,8 @@ div#footer {
     right:0;  
 }
 div#footer div#contact_logo{
-    box-align:center;
+  align:center;
+
 }
 #contact_logo ul{
     margin:auto;

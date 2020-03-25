@@ -7,9 +7,9 @@
 
 <body>
     <div id="menu">
-        <a href="index.html"><img src="image/logo.png" alt="logo" /></a>
+        <a id="logo" href="index.html"><img src="image/logo.png" alt="logo" /></a>
         <ul id="main_menu">
-            <li> <a href="index.html">Trang chủ</a> </li>
+            <li class="active"> <a href="index.html" >Trang chủ</a> </li>
             <li> <a href="about.html">Giới thiệu</a></li>
             <li> <a href="testExams">Thi thử</a></li>
             <li> <a href="document">Tài liệu</a></li>

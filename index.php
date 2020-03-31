@@ -44,7 +44,7 @@
                     buttons[i].classList.remove("active");
                 }
                 this.className +=" active";
-                if (id=="btn1") changBackground(1);
+                if (id=="btn1") changeBackground(1);
                 else if (id=="btn2") changeBackground(2);
                 else changeBackground(3);
             })

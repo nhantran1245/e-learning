@@ -1,7 +1,7 @@
 
 
 
-<div id="footer">
+<footer>
     <div id="contact_logo">
         <ul>
             <li><a><img src="image/FB-logo.png" alt="FB logo"></a></li>
@@ -10,4 +10,4 @@
         </ul>    
     </div>
     
-</div>
+</footer>

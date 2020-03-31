@@ -26,6 +26,9 @@ div#menu{
 #menu a#logo img {
     height: 100%;
 }
+#menu a#logo:hover img{
+    transform:scale(1.2);
+}
 /*#menu ul li a.active{
     background-color:white;
     color:blue;
@@ -35,13 +38,14 @@ div#menu{
 } */
 #menu ul li {
     list-style: none;
-    height:100%;
+    height:80px;
+
 }
 #main_menu li {
     text-decoration: none;
     display: inline-block;  
-    padding:30px 20px; 
-
+    
+    position:relative;
 }
 #main_menu li a {
     text-decoration: none;
@@ -50,18 +54,44 @@ div#menu{
     font-family: "Open Sans", sans-serif;
     color:white;
     text-align:center;
+    line-height:80px;
+    padding:30px 20px;
     
 }
-#main menu ul li.active{
-    background-color:white;
-    color:blue;
-}
 
+#main_menu li.active a{
+    color:blue;
+    background-color:white;
+}
+#main_menu li a:hover{
+    color:red;
+}
 body {
     min-height: 1300px;
 
 }
-div#footer {
+#content{
+   height:600px;
+   background-size:1343px 600px;
+}
+#controlBackground{
+    clear: both;
+    margin-bottom:30px;
+    margin-left:30px;
+}
+#controlBackground button{
+    background:yellow;
+    height:12px;
+    width:12px;
+    border:1px solid black;
+    border-radius:50%;
+}
+#controlBackground button.active{
+    background:lightcoral;
+    
+}
+
+footer {
     background-image: url(../image/footer-background.png);
     background-repeat: repeat;
     min-height:80px;
@@ -70,7 +100,7 @@ div#footer {
     bottom:0;
     right:0;  
 }
-div#footer div#contact_logo{
+footer div#contact_logo{
   align:center;
 
 }

@@ -20,15 +20,25 @@
     </div>
 
 
-    <div id="content">
+<div id="content">
     <div id="controlBackground">
         
             <button  class="changeBackground active" id="btn1" value="1"></button>
             <button  class="changeBackground" id="btn2" value="2"></button>
-            <button  class="changeBackground" id="btn3" value="3"></button>
-       
+            <button  class="changeBackground" id="btn3" value="3"></button> 
     </div>
+    
+    <div id="login">
+        <h3>LOGIN</h3>
+            <form action="/acction_login.php" method="post">
+                <label for="username">Username</label><br />
+                <input type="text" id="username" name="username" /><br />
+                <label for="password">Password</label><br />
+                <input type="password" id="password" name="password" /><br />
+                <input type="submit" value="Submit">
+            </form>
     </div>
+</div>
     <script>
         var t = document.getElementById('content');
         var buttons = document.getElementsByClassName('changeBackground');

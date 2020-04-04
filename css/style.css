@@ -9,7 +9,8 @@ body {
 }
 
 div#menu{
-    background-image: url(../image/footer-background);
+    background-image: url(../image/footer-background.png);
+    /*background-color: black;*/
     background-repeat:repeat;
     height:80px;
 }

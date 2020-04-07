@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
+<?php session_start() ?>
+<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <title>StudyWeb</title>
@@ -27,16 +29,28 @@
             <button  class="changeBackground" id="btn2" value="2"></button>
             <button  class="changeBackground" id="btn3" value="3"></button> 
     </div>
+    <div id="intro"></div>
+
     
     <div id="login">
+        <?php 
+        if (!isset($_SESSION['username'])) { 
+        ?>
         <h3>LOGIN</h3>
-            <form action="/acction_login.php" method="post">
-                <label for="username">Username</label><br />
-                <input type="text" id="username" name="username" /><br />
-                <label for="password">Password</label><br />
-                <input type="password" id="password" name="password" /><br />
-                <input type="submit" value="Submit">
+            <form action="login.php" method="post">
+                
+                <input type="text" id="username" name="username" placeholder="Enter Your Username"/><br />
+               
+                <input type="password" id="password" name="password" placeholder="Enter Your Password"/><br />
+                <p>If you don't have an account, <a href="signUp.php">Sign Up</a> here</p>
+                <input type="submit" value="Sign In" name="loginSubmit">
             </form>
+        <?php } ?>    
+            <?php 
+                if (isset($_SESSION['username'])){ ?>
+                    <p>Hello <?=$_SESSION['username'] ?>, <a href="logOut.php">Log out</a><p>
+                <?php } 
+            ?>
     </div>
 </div>
     <script>

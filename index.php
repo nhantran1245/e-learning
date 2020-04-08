@@ -31,8 +31,8 @@
     </div>
     <div id="intro"></div>
 
-    
-    <div id="login">
+    <script src="./js/switchForm.js"></script>
+    <div class="logForm" id="login">
         <?php 
         if (!isset($_SESSION['username'])) { 
         ?>
@@ -42,8 +42,8 @@
                 <input type="text" id="username" name="username" placeholder="Enter Your Username"/><br />
                
                 <input type="password" id="password" name="password" placeholder="Enter Your Password"/><br />
-                <p>If you don't have an account, <a href="signUp.php">Sign Up</a> here</p>
-                <input type="submit" value="Sign In" name="loginSubmit">
+                <p>If you don't have an account, <a href="#" onClick="switch_signUp()">Sign Up</a> here</p>
+                <input type="submit" value="Sign In" name="loginSubmit"/>
             </form>
         <?php } ?>    
             <?php 
@@ -52,30 +52,28 @@
                 <?php } 
             ?>
     </div>
-</div>
+    <div class="logForm" id="signUp">
+        <form action="" method="post">
+            <h3>SIGN UP</h3>
+            
+            <input type="text" name="lname" placeholder="Enter Your Full Name"/></br>
+            <input type="text" name="username" placeholder="Enter Your Username"/><br/>
+            <input type="password" name="password" placeholder="Enter Your Password"/><br/>
+            <input type="submit" value="Sign Up" name="signUpSubmit"/>
+
+
+            <p>If you have an account, <a href="#" onClick="switch_signIn()">Sign In</a> now</p>
+        </form>
+    </div>
     <script>
-        var t = document.getElementById('content');
-        var buttons = document.getElementsByClassName('changeBackground');
-        function changeBackground(n){
-            if (n==1) t.style.backgroundImage = "url("+"image/1.jpg"+")";
-            else if (n==2) t.style.backgroundImage = "url("+"image/2.jpg"+")";
-            else t.style.backgroundImage = "url("+"image/3.jpg"+")"; 
-        }  
-        for (var i=0;i<buttons.length;i++){
-            buttons[i].addEventListener("click",function(){
-                var id= this.id;
-                for (var i=0;i<buttons.length;i++){
-                    buttons[i].classList.remove("active");
-                }
-                this.className +=" active";
-                if (id=="btn1") changeBackground(1);
-                else if (id=="btn2") changeBackground(2);
-                else changeBackground(3);
-            })
-        }  
-       
-        changeBackground(1);
+        
+        
+        checkLog();
+        
     </script>
+    
+</div>
+    <script src="./js/changeBackground.js"></script>
     
     
     
@@ -85,5 +83,5 @@
 
 
 </body>
-<?php include("footer.php");
+<?php include("footer.php")
 ?>

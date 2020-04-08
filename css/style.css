@@ -5,7 +5,7 @@
 body {
     font-family: arial;
     font-size: 20px;
-
+    min-height:2300px;
 }
 
 div#menu{
@@ -82,14 +82,14 @@ body {
     margin-left:30px;
 }
 #controlBackground button{
-    background:yellow;
-    height:12px;
-    width:12px;
+    background:white;
+    height:10px;
+    width:10px;
     border:1px solid black;
     border-radius:50%;
 }
 #controlBackground button.active{
-    background:lightcoral;
+    background:orangered;
     
 }
 
@@ -126,8 +126,28 @@ footer div#contact_logo{
     transform: scale(1.5);
 }
 #intro{
-    margin:left;
+    margin-left: 120px;
+    margin-top:100px;
+    float:left;
+    max-width:700px;
 }
+#intro h1{
+    color: white;
+    font-size: 50px;
+    font-weight:500;
+    margin-bottom: 50px;
+    line-height: 1.1;
+}
+#intro button{
+    color:white;
+    background-color:#22242b;
+    font-weight:600;
+    height:60px;
+    border-radius:30px;
+    padding:20px 30px;
+    border:none;
+}
+
 .logForm h3{
     font-weight: bold;
     color: Darkgrey;
@@ -170,6 +190,34 @@ footer div#contact_logo{
 .logForm input[type="submit"]:hover{
     border: 3px solid blue;
 }
-.logForm input[type="text"] .inputName{
-    width:30%;
+
+#listObject{
+    padding: 50px 100px;
+    margin-bottom:100px;
+}
+.sbox{
+    float:left;
+    width:250px;
+    height:250px;
+    margin: 20px 15px;
+    background-color:lightgrey;
+    text-align:center;
+}
+.sbox img{
+    width:240px;
+    height:80%;
+}
+
+.sbox a:hover img{
+    transform: scale(1.1);
+}
+
+.sbox p{
+    margin-top:10px;
+    font-family:Courier;
+    font-size: 20px;
+    font-weight:bold;
+}
+div.clear{
+    clear:both;
 }

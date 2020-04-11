@@ -44,8 +44,9 @@
                 <form action="login.php" method="post">
                     
                     <input type="text" id="username" name="username" placeholder="Enter Your Username"/><br />
-                
+                    <span></span></br>
                     <input type="password" id="password" name="password" placeholder="Enter Your Password"/><br />
+                    <span></span></br>
                     <p>If you don't have an account, <a href="#" onClick="switch_signUp()">Sign Up</a> here</p>
                     <input type="submit" value="Sign In" name="loginSubmit"/>
                 </form>
@@ -56,17 +57,63 @@
                     <?php } 
                 ?>
         </div>
+        <?php 
+            $errName = $errUsername = $errPassword ="";
+            if (isset($_GET["errSignUp"])){
+                switch($_GET['errSignUp']){
+                    case "emptyName": 
+                        $errName = "Name is required";
+                        break;
+                    case "validName":
+                        $errName = "Name only contains letters and spaces";
+                        break;
+                    case "emptyUsername":
+                        $errUsername = "Username is required";
+                        break;   
+                    case "validUsername":
+                        $errUsername = "Username is must be between 8-16 characters (number, letter and .)";
+                        break;
+                    case "emptyPassword":
+                        $errPassword = "Password is required";
+                        break;        
+                    case "validPassword":
+                        $errPassword = "Password must be 6-16 characters (number and letter)";    
+                }
+            }
+        ?>
         <div class="logForm" id="signUp">
-            <form action="" method="post">
+            <form action="signUp.php" method="post">
                 <h3>SIGN UP</h3>
                 
-                <input type="text" name="lname" placeholder="Enter Your Full Name"/></br>
-                <input type="text" name="username" placeholder="Enter Your Username"/><br/>
-                <input type="password" name="password" placeholder="Enter Your Password"/><br/>
+                <input type="text" name="lname" placeholder="Enter Your Full Name *" value="" ></br>
+                
+                <span><?php echo $errName; ?></span><br/>
+              
+                <input type="text" name="username" placeholder="Enter Your Username *" value=""  ><br/>
+                
+                <span><?php echo $errUsername; ?></span><br/>
+               
+                <input type="password" name="password" placeholder="Enter Your Password *" value=""  ><br/>
+                
+                <span><?php echo $errPassword; ?></span><br/>
+                <?php
+                if (isset($_GET['errSignUp'])){
+                    if ($_GET['errSignUp']=='noErr') {
+                    ?>
+                <p color="green">Sign Up successfully,<a href="#" onClick="switch_signIn()">Sign In</a> now</p>
+
+                <?php 
+                    unset($_GET['errSignUp']);
+                    } 
+                    else {
+                ?>
+                <p>If you have an account, <a href="#" onClick="switch_signIn()">Sign In</a> now</p>
+                <?php }
+                } ?>
+            
                 <input type="submit" value="Sign Up" name="signUpSubmit"/>
 
-
-                <p>If you have an account, <a href="#" onClick="switch_signIn()">Sign In</a> now</p>
+                
             </form>
         </div>
 

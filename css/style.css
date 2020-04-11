@@ -129,7 +129,7 @@ footer div#contact_logo{
     margin-left: 120px;
     margin-top:100px;
     float:left;
-    max-width:700px;
+    max-width:600px;
 }
 #intro h1{
     color: white;
@@ -170,7 +170,7 @@ footer div#contact_logo{
     padding-left: 10px;
     font-size: 14px;
     font-style: italic;
-    margin-bottom:30px;
+    
 }
 
 .logForm p{
@@ -189,6 +189,12 @@ footer div#contact_logo{
 }
 .logForm input[type="submit"]:hover{
     border: 3px solid blue;
+}
+.logForm span{
+    font-size: 14px;
+    line-height:20px;
+    color:red;
+    margin-bottom: 10px;
 }
 
 #listObject{

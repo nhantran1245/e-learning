@@ -4,7 +4,7 @@ This project was implemented for final assigment. It's a simple education system
 ## Technology:
 HTML & CSS \
 PHP\
-MySQl\
+MySQl
 
 ## Author:
 Nhan Tran \
